@@ -1,2 +1,6 @@
+os: linux
+dist: xenial
 language: generic
-script: curl --silent -L https://git.io/fjXpA | bash -s
+
+script:
+ curl --silent -L https://git.io/fjXpA | bash -s
