@@ -2,8 +2,8 @@ name: Build Action
 
 on:
   push:
-    tags:
-      -'*'
+    branches:
+      -'main'
 jobs:
   build:
      name: build
