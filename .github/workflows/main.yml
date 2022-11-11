@@ -1,0 +1,16 @@
+name: Build Action
+
+on:
+  push:
+    tags:
+      -'*'
+jobs:
+  build:
+     name: build
+     runs-on: ubuntu-latest
+     steps:
+      - name: Beagle Security Test
+        uses: beaglesecurity/beagle-github-action@1.0.1
+        env:
+            access_token: ${{ secrets.beagle_access_token }}
+            application_token: ${{ secrets.beagle_application_token }}
